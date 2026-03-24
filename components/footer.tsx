@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Linkedin, Twitter, Mail } from "lucide-react"
 
 const navGroups = [
@@ -35,8 +36,13 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1 flex flex-col gap-4">
             <div className="flex items-center gap-2">
-              <span className="text-lg font-bold tracking-widest text-foreground">ORBE</span>
-              <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+              <Image
+                src="/Orbe-logo.png"
+                alt="ORBE Logo"
+                width={90}
+                height={32}
+                className="h-8 w-auto object-contain"
+              />
             </div>
             <p className="text-xs text-muted-foreground leading-relaxed max-w-[200px]">
               Gobernanza de datos para startups fintech en Latinoamérica.

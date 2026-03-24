@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Menu, X } from "lucide-react"
 
 const navLinks = [
@@ -34,10 +35,14 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="#inicio" className="flex items-center gap-2 group">
-          <span className="text-xl font-bold tracking-widest text-foreground group-hover:text-primary transition-colors duration-200">
-            ORBE
-          </span>
-          <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+          <Image
+            src="/Orbe-logo.png"
+            alt="ORBE Logo"
+            width={100}
+            height={36}
+            className="h-9 w-auto object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop Nav */}

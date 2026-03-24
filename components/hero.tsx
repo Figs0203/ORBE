@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowRight, Database, Shield, TrendingUp } from "lucide-react"
 
 const stats = [
@@ -41,10 +42,17 @@ export default function Hero() {
           Gobernanza de datos · Colombia · Fintech
         </div>
 
-        {/* Main heading */}
-        <h1 className="animate-fade-in-up-delay-1 text-6xl md:text-8xl font-bold tracking-tight text-foreground leading-none">
-          ORBE
-        </h1>
+        {/* Main heading – Logo image */}
+        <div className="animate-fade-in-up-delay-1">
+          <Image
+            src="/Orbe-logo.png"
+            alt="ORBE"
+            width={400}
+            height={120}
+            className="h-24 md:h-36 w-auto object-contain mx-auto"
+            priority
+          />
+        </div>
 
         {/* Tagline */}
         <p className="animate-fade-in-up-delay-2 text-xl md:text-2xl font-medium text-primary text-balance">
@@ -84,16 +92,12 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Floating icons */}
-      <div className="absolute left-8 top-1/3 hidden lg:flex flex-col gap-4 opacity-20">
-        <Database size={20} className="text-primary" />
-        <Shield size={20} className="text-primary" />
-        <TrendingUp size={20} className="text-primary" />
+      {/* Floating symbol */}
+      <div className="absolute left-8 top-1/3 hidden lg:block opacity-10">
+        <Image src="/Orbe-simbolo.png" alt="" width={60} height={60} className="w-14 h-14 object-contain" />
       </div>
-      <div className="absolute right-8 top-1/3 hidden lg:flex flex-col gap-4 opacity-20">
-        <TrendingUp size={20} className="text-primary" />
-        <Database size={20} className="text-primary" />
-        <Shield size={20} className="text-primary" />
+      <div className="absolute right-8 top-1/3 hidden lg:block opacity-10">
+        <Image src="/Orbe-simbolo.png" alt="" width={60} height={60} className="w-14 h-14 object-contain" />
       </div>
     </section>
   )
